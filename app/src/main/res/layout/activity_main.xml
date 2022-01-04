@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:card_view="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#FFFFFF"
+	android:orientation="vertical"
+	tools:context=".MainActivity">
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/colorPrimary"
+		android:paddingVertical="20dp">
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:text="@string/app_name"
+			android:textAppearance="@style/customFont5"
+			android:textColor="@color/colorWhite" />
+
+		<ImageView
+			android:id="@+id/iv_logout"
+			android:layout_width="25dp"
+			android:layout_height="25dp"
+			android:layout_alignParentEnd="true"
+			android:layout_marginEnd="16dp"
+			android:src="@drawable/ic_logout" />
+	</RelativeLayout>
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:orientation="vertical">
+
+			<com.google.android.flexbox.FlexboxLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="20dp"
+				android:layout_marginBottom="20dp"
+				app:alignContent="flex_start"
+				app:alignItems="flex_start"
+				app:flexWrap="wrap"
+				app:justifyContent="center">
+
+				<androidx.cardview.widget.CardView
+					android:id="@+id/cv_maps"
+					android:layout_width="155dp"
+					android:layout_height="190dp"
+					android:layout_margin="10dp"
+					android:clickable="true"
+					android:clipChildren="false"
+					android:clipToPadding="false"
+					android:divider="@android:color/transparent"
+					android:dividerHeight="0.0px"
+					android:elevation="8dp"
+					android:focusable="true"
+					android:foreground="?android:attr/selectableItemBackground"
+					card_view:cardCornerRadius="10dp"
+					card_view:cardElevation="7dp"
+					card_view:cardPreventCornerOverlap="false">
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:gravity="center"
+						android:orientation="vertical">
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="10dp"
+							android:gravity="center"
+							android:text="Maps"
+							android:textAppearance="@style/customFont5"
+							android:textColor="@color/colorBlack"
+							android:textStyle="bold" />
+
+						<View
+							android:layout_width="match_parent"
+							android:layout_height="1dp"
+							android:layout_marginHorizontal="10dp"
+							android:layout_marginTop="10dp"
+							android:background="@color/colorVeryDarkWhite"
+							tools:targetApi="o" />
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:gravity="center"
+							android:padding="5dp"
+							android:text="Maps Pelaporan Kerusakan dan Perbaikan Jalan"
+							android:textAppearance="@style/customFont1"
+							android:textColor="@color/colorBlack" />
+					</LinearLayout>
+				</androidx.cardview.widget.CardView>
+
+				<androidx.cardview.widget.CardView
+					android:id="@+id/cv_penilik"
+					android:layout_width="155dp"
+					android:layout_height="190dp"
+					android:layout_margin="10dp"
+					android:clickable="true"
+					android:clipChildren="false"
+					android:clipToPadding="false"
+					android:divider="@android:color/transparent"
+					android:dividerHeight="0.0px"
+					android:elevation="8dp"
+					android:focusable="true"
+					android:foreground="?android:attr/selectableItemBackground"
+					card_view:cardCornerRadius="10dp"
+					card_view:cardElevation="7dp"
+					card_view:cardPreventCornerOverlap="false">
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:gravity="center"
+						android:orientation="vertical">
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="10dp"
+							android:gravity="center"
+							android:text="Penilikan"
+							android:textAppearance="@style/customFont5"
+							android:textColor="@color/colorBlack"
+							android:textStyle="bold" />
+
+						<View
+							android:layout_width="match_parent"
+							android:layout_height="1dp"
+							android:layout_marginHorizontal="10dp"
+							android:layout_marginTop="10dp"
+							android:background="@color/colorVeryDarkWhite"
+							tools:targetApi="o" />
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:gravity="center"
+							android:padding="5dp"
+							android:text="Pelaporan Jalan yang Rusak"
+							android:textAppearance="@style/customFont1"
+							android:textColor="@color/colorBlack" />
+					</LinearLayout>
+				</androidx.cardview.widget.CardView>
+
+				<androidx.cardview.widget.CardView
+					android:id="@+id/cv_data"
+					android:layout_width="155dp"
+					android:layout_height="190dp"
+					android:layout_margin="10dp"
+					android:clickable="true"
+					android:clipChildren="false"
+					android:clipToPadding="false"
+					android:divider="@android:color/transparent"
+					android:dividerHeight="0.0px"
+					android:elevation="8dp"
+					android:focusable="true"
+					android:foreground="?android:attr/selectableItemBackground"
+					card_view:cardCornerRadius="10dp"
+					card_view:cardElevation="7dp"
+					card_view:cardPreventCornerOverlap="false">
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:gravity="center"
+						android:orientation="vertical">
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="10dp"
+							android:gravity="center"
+							android:text="List Data"
+							android:textAppearance="@style/customFont5"
+							android:textColor="@color/colorBlack"
+							android:textStyle="bold" />
+
+						<View
+							android:layout_width="match_parent"
+							android:layout_height="1dp"
+							android:layout_marginHorizontal="10dp"
+							android:layout_marginTop="10dp"
+							android:background="@color/colorVeryDarkWhite"
+							tools:targetApi="o" />
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:gravity="center"
+							android:padding="5dp"
+							android:text="Data Pelaporan Kerusakan dan Perbaikan Jalan"
+							android:textAppearance="@style/customFont1"
+							android:textColor="@color/colorBlack" />
+					</LinearLayout>
+				</androidx.cardview.widget.CardView>
+
+				<androidx.cardview.widget.CardView
+					android:id="@+id/cv_info"
+					android:layout_width="155dp"
+					android:layout_height="190dp"
+					android:layout_margin="10dp"
+					android:clickable="true"
+					android:clipChildren="false"
+					android:clipToPadding="false"
+					android:divider="@android:color/transparent"
+					android:dividerHeight="0.0px"
+					android:elevation="8dp"
+					android:foreground="?android:attr/selectableItemBackground"
+					card_view:cardCornerRadius="10dp"
+					card_view:cardElevation="7dp"
+					card_view:cardPreventCornerOverlap="false">
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:gravity="center"
+						android:orientation="vertical">
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="10dp"
+							android:gravity="center"
+							android:text="Tentang Aplikasi"
+							android:textAppearance="@style/customFont5"
+							android:textColor="@color/colorBlack"
+							android:textStyle="bold" />
+
+						<View
+							android:layout_width="match_parent"
+							android:layout_height="1dp"
+							android:layout_marginHorizontal="10dp"
+							android:layout_marginTop="10dp"
+							android:background="@color/colorVeryDarkWhite"
+							tools:targetApi="o" />
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:gravity="center"
+							android:padding="5dp"
+							android:text="Tentang dan Versi Aplikasi"
+							android:textAppearance="@style/customFont1"
+							android:textColor="@color/colorBlack" />
+					</LinearLayout>
+				</androidx.cardview.widget.CardView>
+
+				<androidx.cardview.widget.CardView
+					android:id="@+id/cv_pengaturan"
+					android:layout_width="155dp"
+					android:layout_height="190dp"
+					android:layout_margin="10dp"
+					android:clickable="true"
+					android:clipChildren="false"
+					android:clipToPadding="false"
+					android:divider="@android:color/transparent"
+					android:dividerHeight="0.0px"
+					android:elevation="8dp"
+					android:foreground="?android:attr/selectableItemBackground"
+					card_view:cardCornerRadius="10dp"
+					card_view:cardElevation="7dp"
+					card_view:cardPreventCornerOverlap="false">
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:gravity="center"
+						android:orientation="vertical">
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="10dp"
+							android:gravity="center"
+							android:text="Pengaturan"
+							android:textAppearance="@style/customFont5"
+							android:textColor="@color/colorBlack"
+							android:textStyle="bold" />
+
+						<View
+							android:layout_width="match_parent"
+							android:layout_height="1dp"
+							android:layout_marginHorizontal="10dp"
+							android:layout_marginTop="10dp"
+							android:background="@color/colorVeryDarkWhite"
+							tools:targetApi="o" />
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:gravity="center"
+							android:padding="5dp"
+							android:text="Data Diri, Ubah Foto dan Ubah Password"
+							android:textAppearance="@style/customFont1"
+							android:textColor="@color/colorBlack" />
+					</LinearLayout>
+				</androidx.cardview.widget.CardView>
+			</com.google.android.flexbox.FlexboxLayout>
+
+			<TextView
+				android:id="@+id/tv_koordinat"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:text="Koordinat: Kosong"
+				android:textAppearance="@style/customFont2"
+				android:textColor="@color/colorBlack"
+				android:visibility="gone" />
+
+		</LinearLayout>
+	</ScrollView>
+
+</LinearLayout>

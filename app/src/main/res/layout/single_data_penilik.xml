@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="5dp"
+    card_view:cardElevation="5dp"
+    card_view:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.07"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/checkBox1"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:theme="@style/WhiteCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.93"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/img1"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_weight="0.50"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/defaultimg" />
+
+                    <ImageView
+                        android:id="@+id/img2"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_weight="0.50"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/defaultimg" />
+                </LinearLayout>
+
+				<TextView
+					android:id="@+id/txt_id_kerusakan"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="Id"
+					android:visibility="gone"
+					android:textAppearance="@style/customFont1"
+					android:textColor="@color/colorBlack" />
+
+                <LinearLayout
+                    android:id="@+id/ll_nama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_weight="0.50"
+                        android:text="Nama Penilik"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_namaPenilik"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_weight="0.50"
+                        android:text="nama"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack" />
+                </LinearLayout>
+
+				<LinearLayout
+					android:id="@+id/ll_satker"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="3dp"
+					android:orientation="horizontal">
+
+					<TextView
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_marginStart="7dp"
+						android:layout_marginLeft="7dp"
+						android:layout_weight="0.50"
+						android:text="Satker"
+						android:textAppearance="@style/customFont1"
+						android:textColor="@color/colorBlack"
+						android:textStyle="bold" />
+
+					<TextView
+						android:id="@+id/txt_namaSatker"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="7dp"
+						android:layout_marginRight="30dp"
+						android:layout_weight="0.50"
+						android:text="satker"
+						android:textAppearance="@style/customFont1"
+						android:textColor="@color/colorBlack" />
+				</LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_ppk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_weight="0.50"
+                        android:text="PPK"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_namaPpk"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_weight="0.50"
+                        android:text="ppk"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_weight="0.50"
+                        android:text="Kategori Kerusakan"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_kategoriKerusakan"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_weight="0.50"
+                        android:text="kerusakan"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_weight="0.50"
+                        android:text="Tanggal Pelaporan"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_tanggalRusak"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_weight="0.50"
+                        android:text="tgl"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_weight="0.50"
+                        android:text="Tingkat Kerusakan"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_tingkatKerusakan"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_weight="0.50"
+                        android:text="tingkat"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_weight="0.50"
+                        android:text="Status Perbaikan"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_status"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_weight="0.50"
+                        android:text="Status"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

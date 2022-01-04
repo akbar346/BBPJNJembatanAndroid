@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#FFFFFF"
+	android:orientation="vertical"
+	tools:context=".PenilikActivity">
+
+	<include layout="@layout/toolbar" />
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="8dp"
+		android:background="@color/colorWhite"
+		android:orientation="horizontal">
+
+		<LinearLayout
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:orientation="vertical">
+
+			<ImageView
+				android:id="@+id/pic"
+				android:layout_width="150dp"
+				android:layout_height="130dp"
+				android:layout_gravity="center"
+				android:src="@drawable/defaultimg" />
+
+			<Button
+				android:id="@+id/ambil_gambar"
+				android:layout_width="150dp"
+				android:layout_height="wrap_content"
+				android:backgroundTint="#2196f3"
+				android:text="Ambil Foto"
+				android:textAppearance="@style/customFont1"
+				android:textColor="@color/colorWhite" />
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:orientation="vertical">
+
+			<ImageView
+				android:id="@+id/pic1"
+				android:layout_width="150dp"
+				android:layout_height="130dp"
+				android:layout_gravity="center"
+				android:src="@drawable/defaultimg" />
+
+			<Button
+				android:id="@+id/ambil_gambar1"
+				android:layout_width="150dp"
+				android:layout_height="wrap_content"
+				android:backgroundTint="#2196f3"
+				android:text="Ambil Foto"
+				android:textAppearance="@style/customFont1"
+				android:textColor="@color/colorWhite" />
+		</LinearLayout>
+	</LinearLayout>
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:padding="@dimen/fab_margin">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="Kategori Kerusakan"
+					android:textAppearance="@style/customFont1"
+					android:textColor="@color/colorBlack"
+					android:textStyle="bold" />
+
+				<Spinner
+					android:id="@+id/s_kategori"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:spinnerMode="dropdown"
+					android:textAppearance="@style/customFont1" />
+
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="1dp"
+					android:background="@color/colorBlack" />
+			</LinearLayout>
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/colorVeryDarkWhite" />
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:padding="@dimen/fab_margin">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="Jenis Kerusakan"
+					android:textAppearance="@style/customFont1"
+					android:textColor="@color/colorBlack"
+					android:textStyle="bold" />
+
+				<Spinner
+					android:id="@+id/s_jenis"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:spinnerMode="dropdown"
+					android:textAppearance="@style/customFont1" />
+
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="1dp"
+					android:background="@color/colorBlack" />
+
+			</LinearLayout>
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/colorVeryDarkWhite" />
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:padding="@dimen/fab_margin">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="Tingkat Kerusakan"
+					android:textAppearance="@style/customFont1"
+					android:textColor="@color/colorBlack"
+					android:textStyle="bold" />
+
+				<Spinner
+					android:id="@+id/s_tingkat"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:spinnerMode="dropdown"
+					android:textAppearance="@style/customFont1" />
+
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="1dp"
+					android:background="@color/colorBlack" />
+			</LinearLayout>
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/colorVeryDarkWhite" />
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:padding="@dimen/fab_margin">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="Koordinat"
+					android:textAppearance="@style/customFont1"
+					android:textColor="@color/colorBlack"
+					android:textStyle="bold" />
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="5dp"
+					android:orientation="horizontal">
+
+					<LinearLayout
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:orientation="horizontal">
+
+						<TextView
+							android:layout_width="65dp"
+							android:layout_height="wrap_content"
+							android:text="Latitude"
+							android:textAppearance="@style/customFont1"
+							android:textColor="@color/colorBlack" />
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text=":"
+							android:textAppearance="@style/customFont1"
+							android:textColor="@color/colorBlack" />
+
+						<TextView
+							android:id="@+id/txt_lat"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="3dp"
+							android:text="-"
+							android:textAppearance="@style/customFont1"
+							android:textColor="@color/colorBlack"
+							android:textStyle="bold" />
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:orientation="horizontal">
+
+						<TextView
+							android:layout_width="65dp"
+							android:layout_height="wrap_content"
+							android:text="Longitude"
+							android:textAppearance="@style/customFont1"
+							android:textColor="@color/colorBlack" />
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text=":"
+							android:textAppearance="@style/customFont1"
+							android:textColor="@color/colorBlack" />
+
+						<TextView
+							android:id="@+id/txt_lng"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="3dp"
+							android:text="-"
+							android:textAppearance="@style/customFont1"
+							android:textColor="@color/colorBlack"
+							android:textStyle="bold" />
+					</LinearLayout>
+
+				</LinearLayout>
+			</LinearLayout>
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/colorVeryDarkWhite" />
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:padding="@dimen/fab_margin">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="Keterangan"
+					android:textAppearance="@style/customFont1"
+					android:textColor="@color/colorBlack"
+					android:textStyle="bold" />
+
+				<EditText
+					android:id="@+id/et_keterangan"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="-5dp"
+					android:hint="Keterangan"
+					android:inputType="text"
+					android:textAppearance="@style/customFont1"
+					android:textColor="@color/colorBlack" />
+			</LinearLayout>
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/colorVeryDarkWhite" />
+
+			<Button
+				android:id="@+id/btn_simpan"
+				style="@style/Widget.MaterialComponents.Button.Icon"
+				android:layout_width="match_parent"
+				android:layout_height="60dp"
+				android:layout_gravity="center"
+				android:layout_marginHorizontal="@dimen/fab_margin"
+				android:layout_marginTop="8dp"
+				android:elevation="3dp"
+				android:text="Simpan"
+				android:textAppearance="@style/customFont2"
+				android:textColor="@color/colorWhite"
+				app:backgroundTint="@color/colorPrimary" />
+
+	</LinearLayout>
+</ScrollView></androidx.appcompat.widget.LinearLayoutCompat>

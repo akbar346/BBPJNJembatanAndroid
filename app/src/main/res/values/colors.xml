@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="colorPrimary">@color/colorBlue</color>
+	<color name="colorPrimaryDark">@color/colorDarkBlue</color>
+	<color name="colorAccent">@color/colorBlue</color>
+
+	<color name="colorWhite">#FAFAFA</color>
+	<color name="colorDarkWhite">#EEEEEE</color>
+	<color name="colorVeryDarkWhite">#E0E0E0</color>
+
+	<color name="colorBlack">#616161</color>
+	<color name="colorDarkBlack">#424242</color>
+
+	<color name="colorYellow">#ecc721</color>
+	<color name="colorDarkYellow">#d3b012</color>
+
+	<color name="colorBlue">#3498db</color>
+	<color name="colorDarkBlue">#2980b9</color>
+
+	<integer-array name="progress_color">
+		<item>@color/colorPrimary</item>
+		<item>@color/colorVeryDarkWhite</item>
+	</integer-array>
+
+	<color name="green">#00897B</color>
+
+	<color name="yellow">#FB8C00</color>
+
+	<color name="red">#E53935</color>
+</resources>

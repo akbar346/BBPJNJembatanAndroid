@@ -1,0 +1,50 @@
+<resources>
+	<string name="app_name">BBPJN Jembatan</string>
+
+	<style name="customFont0">
+		<item name="android:fontFamily">@font/montserrat</item>
+		<item name="android:textSize">10sp</item>
+	</style>
+
+	<style name="customFont1">
+		<item name="android:fontFamily">@font/montserrat</item>
+		<item name="android:textSize">12sp</item>
+	</style>
+
+	<style name="customFont2">
+		<item name="android:fontFamily">@font/montserrat</item>
+		<item name="android:textSize">14sp</item>
+	</style>
+
+	<style name="customFont3">
+		<item name="android:fontFamily">@font/montserrat</item>
+		<item name="android:textSize">16sp</item>
+	</style>
+
+	<style name="customFont4">
+		<item name="android:fontFamily">@font/montserrat</item>
+		<item name="android:textSize">18sp</item>
+	</style>
+
+	<style name="customFont5">
+		<item name="android:fontFamily">@font/montserrat</item>
+		<item name="android:textSize">20sp</item>
+	</style>
+
+	<style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+		<item name="android:fontFamily">@font/montserrat</item>
+		<item name="android:textSize">15sp</item>
+	</style>
+
+	<string name="empty">--</string>
+	<string name="ok">OK</string>
+	<string name="cancel">No</string>
+	<string name="error">Error</string>
+	<string name="permissionExplanation">Aplikasi sangat membutuhkan lokasi Anda.</string>
+	<string name="switchOnLocationShort">Oops - Anda tampaknya terdeksi menggunakan fake GPS. Untuk melanjutkan, klik "OK".</string>
+	<string name="switchOnLocationLong">Anda tampaknya telah menonaktifkan layanan lokasi saat ini. Aplikasi ini membutuhkan lokasi Anda. Untuk melanjutkan, klik "OK" dan aktifkan lokasi. Jika Anda khawatir tentang penggunaan baterai, pastikan untuk beralih ke mode hemat energi.</string>
+	<string name="permissionPermanentlyDeclined">Anda telah menolak izin lokasi secara permanen. Aplikasi ini membutuhkan lokasi Anda. Klik "OK" untuk mengubah pengaturan izin.</string>
+	<string name="mockLocationMessage">Stop\nMocking\nMe</string>
+	<!-- TODO: Remove or change this placeholder text -->
+	<string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="#FFFFFF"
+	android:orientation="vertical">
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:padding="@dimen/fab_margin">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="Username"
+					android:textAppearance="@style/customFont1"
+					android:textColor="@color/colorBlack"
+					android:textStyle="bold" />
+
+				<TextView
+					android:id="@+id/txt_username"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="5sp"
+					android:text="-"
+					android:textAppearance="@style/customFont1"
+					android:textColor="@color/colorBlack" />
+			</LinearLayout>
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/colorVeryDarkWhite" />
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:padding="@dimen/fab_margin">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="Nama Lengkap"
+					android:textAppearance="@style/customFont1"
+					android:textColor="@color/colorBlack"
+					android:textStyle="bold" />
+
+				<TextView
+					android:id="@+id/txt_nama"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="5sp"
+					android:text="-"
+					android:textAppearance="@style/customFont1"
+					android:textColor="@color/colorBlack" />
+			</LinearLayout>
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/colorVeryDarkWhite" />
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:padding="@dimen/fab_margin">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="Email"
+					android:textAppearance="@style/customFont1"
+					android:textColor="@color/colorBlack"
+					android:textStyle="bold" />
+
+				<TextView
+					android:id="@+id/txt_email"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="5sp"
+					android:text="-"
+					android:textAppearance="@style/customFont1"
+					android:textColor="@color/colorBlack" />
+			</LinearLayout>
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/colorVeryDarkWhite" />
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:padding="@dimen/fab_margin">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="No. HP"
+					android:textAppearance="@style/customFont1"
+					android:textColor="@color/colorBlack"
+					android:textStyle="bold" />
+
+				<TextView
+					android:id="@+id/txt_hp"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="5sp"
+					android:text="-"
+					android:textAppearance="@style/customFont1"
+					android:textColor="@color/colorBlack" />
+			</LinearLayout>
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/colorVeryDarkWhite" />
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:padding="@dimen/fab_margin">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="Jabatan"
+					android:textAppearance="@style/customFont1"
+					android:textColor="@color/colorBlack"
+					android:textStyle="bold" />
+
+				<TextView
+					android:id="@+id/txt_dataJabatan"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="5sp"
+					android:text="-"
+					android:textAppearance="@style/customFont1"
+					android:textColor="@color/colorBlack" />
+			</LinearLayout>
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/colorVeryDarkWhite" />
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:padding="@dimen/fab_margin">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="Satker"
+					android:textAppearance="@style/customFont1"
+					android:textColor="@color/colorBlack"
+					android:textStyle="bold" />
+
+				<TextView
+					android:id="@+id/txt_dataSatker"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="5sp"
+					android:text="-"
+					android:textAppearance="@style/customFont1"
+					android:textColor="@color/colorBlack" />
+			</LinearLayout>
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/colorVeryDarkWhite" />
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:padding="@dimen/fab_margin">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="PPK"
+					android:textAppearance="@style/customFont1"
+					android:textColor="@color/colorBlack"
+					android:textStyle="bold" />
+
+				<TextView
+					android:id="@+id/txt_dataPpk"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="5sp"
+					android:text="-"
+					android:textAppearance="@style/customFont1"
+					android:textColor="@color/colorBlack" />
+			</LinearLayout>
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/colorVeryDarkWhite" />
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>

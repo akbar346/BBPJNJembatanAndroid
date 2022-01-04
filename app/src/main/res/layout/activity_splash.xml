@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:apps="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/colorBlue"
+	android:orientation="vertical">
+
+	<ImageView
+		android:layout_width="match_parent"
+		android:layout_height="100dp"
+		android:layout_centerVertical="true"
+		android:layout_marginLeft="50dp"
+		android:layout_marginRight="50dp"
+		android:src="@drawable/logo" />
+
+	<ProgressBar
+		android:id="@+id/splash_screen_progress_bar"
+		style="@android:style/Widget.DeviceDefault.ProgressBar.Horizontal"
+		android:layout_width="130dp"
+		android:layout_height="wrap_content"
+		android:layout_above="@id/tv_versi"
+		android:layout_centerInParent="true"
+		android:theme="@style/progresbartheme" />
+
+	<TextView
+		android:id="@+id/tv_versi"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_above="@id/ll_copy"
+		android:layout_centerInParent="true"
+		android:layout_marginTop="5dp"
+		android:gravity="center"
+		android:textAppearance="@style/customFont1"
+		android:textColor="@color/colorWhite"
+		apps:text="Versi Aplikasi" />
+
+	<LinearLayout
+		android:id="@+id/ll_copy"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_marginBottom="40dp"
+		android:gravity="center"
+		android:orientation="horizontal"
+		apps:ignore="UseCompoundDrawables">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Copyright @ 2021"
+			android:textAppearance="@style/customFont1"
+			android:textColor="@color/colorWhite" />
+	</LinearLayout>
+
+</RelativeLayout>

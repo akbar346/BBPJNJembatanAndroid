@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#FFFFFF"
+	android:orientation="vertical">
+
+	<include layout="@layout/toolbar" />
+
+	<com.google.android.flexbox.FlexboxLayout
+		android:id="@+id/ly_profil"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/colorWhite"
+		android:paddingLeft="20dp"
+		android:paddingTop="10dp"
+		android:paddingRight="20dp"
+		android:paddingBottom="10dp">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:gravity="center"
+			android:orientation="horizontal"
+			app:layout_flexBasisPercent="100%">
+
+			<RelativeLayout
+				android:id="@+id/rl_foto"
+				android:layout_width="80dp"
+				android:layout_height="80dp"
+				android:gravity="center_vertical">
+
+				<com.alexzh.circleimageview.CircleImageView
+					android:id="@+id/img_profil"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:elevation="3sp"
+					android:src="@drawable/defaultimg"
+					app:view_borderColor="@color/colorWhite"
+					app:view_borderWidth="2dp"
+					app:view_shadowDx="2dp"
+					app:view_shadowDy="2dp" />
+
+				<ImageButton
+					android:id="@+id/btn_uploadProfil"
+					android:layout_width="40dp"
+					android:layout_height="40dp"
+					android:layout_alignRight="@+id/img_profil"
+					android:layout_alignBottom="@+id/img_profil"
+					android:layout_gravity="bottom|right"
+					android:background="@drawable/ripple_oval"
+					android:elevation="8dp"
+					android:src="@drawable/ic_baseline_camera" />
+			</RelativeLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="10sp"
+				android:gravity="right"
+				android:orientation="vertical">
+
+				<TextView
+					android:id="@+id/txt_namaProfil"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="3sp"
+					android:gravity="right"
+					android:text="-"
+					android:textAppearance="@style/customFont2"
+					android:textColor="@color/colorBlack"
+					android:textStyle="bold" />
+
+				<TextView
+					android:id="@+id/txt_jabatan"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="3sp"
+					android:gravity="right"
+					android:text="-"
+					android:textAppearance="@style/customFont2"
+					android:textColor="@color/colorBlack" />
+
+				<TextView
+					android:id="@+id/txt_satker"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="3sp"
+					android:gravity="right"
+					android:text="-"
+					android:textAppearance="@style/customFont2"
+					android:textColor="@color/colorBlack" />
+
+				<TextView
+					android:id="@+id/txt_ppk"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:gravity="right"
+					android:text="-"
+					android:textAppearance="@style/customFont2"
+					android:textColor="@color/colorBlack" />
+			</LinearLayout>
+		</LinearLayout>
+	</com.google.android.flexbox.FlexboxLayout>
+
+	<com.google.android.material.tabs.TabLayout
+		android:id="@+id/tabs"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textAppearance="@style/customFont1"
+		android:textSize="14sp"
+		app:tabBackground="@drawable/tab_selector"
+		app:tabGravity="fill"
+		app:tabMaxWidth="0dp"
+		app:tabMode="fixed" />
+
+	<androidx.viewpager.widget.ViewPager
+		android:id="@+id/viewpager"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</LinearLayout>

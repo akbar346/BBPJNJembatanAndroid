@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ll_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/headerMenu2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:padding="13dp"
+            android:text="Laporan Kerusakan Jembatan"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/montserrat"
+            android:textSize="17dp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_nama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.40"
+                        android:text="Nama Penilik"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.05"
+                        android:text=":"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txt_nama"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:text="nama"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.40"
+                        android:text="Status"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.05"
+                        android:text=":"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack" />
+
+                    <TextView
+                        android:id="@+id/txt_status"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:text="isi Status"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.40"
+                        android:text="Satker"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.05"
+                        android:text=":"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack" />
+
+                    <TextView
+                        android:id="@+id/txt_satker"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:text="isi satker"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.40"
+                        android:text="PPK"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.05"
+                        android:text=":"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack" />
+
+                    <TextView
+                        android:id="@+id/txt_ppk"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:text="isi ppk"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.40"
+                        android:text="Tanggal Pelaporan"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.05"
+                        android:text=":"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack" />
+
+                    <TextView
+                        android:id="@+id/txt_tanggalRusak"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:text="isi tanggal survey"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.40"
+                        android:text="Kategori Kerusakan"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.05"
+                        android:text=":"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack" />
+
+                    <TextView
+                        android:id="@+id/txt_kategori"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:text="isi kategori kerusakan"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.40"
+                        android:text="Jenis Kerusakan"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.05"
+                        android:text=":"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack" />
+
+                    <TextView
+                        android:id="@+id/txt_jenis"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:text="isi jenis kerusakan"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.40"
+                        android:text="Tingkat Kerusakan"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.05"
+                        android:text=":"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack" />
+
+                    <TextView
+                        android:id="@+id/txt_tingkat"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:text="isi tingkat kerusakan"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.40"
+                        android:text="Keterangan"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.05"
+                        android:text=":"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack" />
+
+                    <TextView
+                        android:id="@+id/txt_ket"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:text="isi catatan"
+                        android:textAppearance="@style/customFont1"
+                        android:textColor="@color/colorBlack" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_rute"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/yellow"
+                    android:text="Lihat Rute"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/customFont1"
+                    android:textColor="@color/colorWhite" />
+
+				<Button
+					android:id="@+id/btn_detail"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="5dp"
+					android:layout_marginBottom="5dp"
+					android:background="@color/colorYellow"
+					android:text="Lihat Data"
+					android:textAppearance="@style/customFont1"
+					android:textAllCaps="false"
+					android:textColor="@color/colorWhite" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>
