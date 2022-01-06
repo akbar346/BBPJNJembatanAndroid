@@ -15,8 +15,9 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class UtilsApi {
-	private static final String API = "http://192.168.1.72/project/perbaikan_jembatan/";
+//	private static final String API = "http://192.168.1.72/project/perbaikan_jembatan/";
 //	private static final String API = "http://10.172.1.11/project/perbaikan_jembatan/";
+	private static final String API = "http://192.168.43.75/project/perbaikan_jembatan/";
 	private static final String BASE_URL = API+"index.php/Api/";
 	public static final String BASE_IMG_MARKER = API+"assets/upload/foto/";
 	public static final String BASE_IMG_API = API+"assets/upload/perbaikan/";

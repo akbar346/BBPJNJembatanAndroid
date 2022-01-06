@@ -129,7 +129,7 @@ public class DetailListDataActivity extends AppCompatActivity {
 	private BaseApiService mApiService;
 	private Context mContext;
 	private AppDatabaseRoom db;
-	private String id_kerusakan, id_user;
+	private String id_kerusakan, id_user, jabatan;
 	private boolean isChooseImage;
 	private Bitmap bitmap1, bitmap2;
 	private RadioButton belum, proses, sudah;
@@ -150,7 +150,7 @@ public class DetailListDataActivity extends AppCompatActivity {
 		db = Room.databaseBuilder(getApplicationContext(), AppDatabaseRoom.class, "db_bbpjn").allowMainThreadQueries().fallbackToDestructiveMigration().build();
 		id_kerusakan = getIntent().getStringExtra("id_kerusakan");
 		id_user = db.userDao().selectData().getId_user();
-		String jabatan = db.userDao().selectData().getNama_jabatan();
+		jabatan = db.userDao().selectData().getNama_jabatan();
 
 		ConnectivityManager cm = (ConnectivityManager) mContext.getSystemService(Context.CONNECTIVITY_SERVICE);
 		NetworkInfo netInfo = cm.getActiveNetworkInfo();
@@ -201,109 +201,113 @@ public class DetailListDataActivity extends AppCompatActivity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		if (item.getItemId() == R.id.action_penanganan_true) {
-			LayoutInflater inflater = getLayoutInflater();
-			@SuppressLint("InflateParams") View alertLayout = inflater.inflate(R.layout.layout_edit, null);
+			if(jabatan.equals("PPK")){
+				LayoutInflater inflater = getLayoutInflater();
+				@SuppressLint("InflateParams") View alertLayout = inflater.inflate(R.layout.layout_edit, null);
 
-			ImageView imv_simpan = alertLayout.findViewById(R.id.imv_simpan);
+				ImageView imv_simpan = alertLayout.findViewById(R.id.imv_simpan);
 
-			RadioGroup radiopenanganan = alertLayout.findViewById(R.id.radiopenanganan);
-			belum = alertLayout.findViewById(R.id.belum);
-			proses = alertLayout.findViewById(R.id.proses);
-			sudah = alertLayout.findViewById(R.id.sudah);
+				RadioGroup radiopenanganan = alertLayout.findViewById(R.id.radiopenanganan);
+				belum = alertLayout.findViewById(R.id.belum);
+				proses = alertLayout.findViewById(R.id.proses);
+				sudah = alertLayout.findViewById(R.id.sudah);
 
-			penanganan = alertLayout.findViewById(R.id.penanganan);
-			Button ambil_gambar1 = alertLayout.findViewById(R.id.ambil_gambar1);
-			Button ambil_gambar2 = alertLayout.findViewById(R.id.ambil_gambar2);
-			gambar_baik1 = alertLayout.findViewById(R.id.gambar_baik1);
-			gambar_baik2 = alertLayout.findViewById(R.id.gambar_baik2);
+				penanganan = alertLayout.findViewById(R.id.penanganan);
+				Button ambil_gambar1 = alertLayout.findViewById(R.id.ambil_gambar1);
+				Button ambil_gambar2 = alertLayout.findViewById(R.id.ambil_gambar2);
+				gambar_baik1 = alertLayout.findViewById(R.id.gambar_baik1);
+				gambar_baik2 = alertLayout.findViewById(R.id.gambar_baik2);
 
-			loading_perbaruan = alertLayout.findViewById(R.id.loading_perbaruan);
-			layout_sukses = alertLayout.findViewById(R.id.layout_sukses);
+				loading_perbaruan = alertLayout.findViewById(R.id.loading_perbaruan);
+				layout_sukses = alertLayout.findViewById(R.id.layout_sukses);
 
-			radiopenanganan.clearCheck();
+				radiopenanganan.clearCheck();
 
-			switch (statusPerbaikan) {
-				case "3":
-					imv_simpan.setVisibility(GONE);
-					belum.setVisibility(GONE);
-					proses.setVisibility(GONE);
-					sudah.setVisibility(GONE);
-					break;
-				case "2":
-					belum.setVisibility(GONE);
-					proses.setVisibility(GONE);
-					break;
-				case "1":
-					belum.setVisibility(GONE);
-					break;
-				default:
-					belum.setVisibility(View.VISIBLE);
-					break;
-			}
-
-			ambil_gambar1.setOnClickListener((View view) -> {
-				isChooseImage = false;
-				showFileChooser();
-			});
-			ambil_gambar2.setOnClickListener((View view) -> {
-				isChooseImage = true;
-				showFileChooser();
-			});
-
-			radiopenanganan.setOnCheckedChangeListener((RadioGroup radioGroup, int i) -> {
-				switch (i) {
-					case R.id.belum:
-						penanganan.setVisibility(GONE);
-						tangani = "1";
+				switch (statusPerbaikan) {
+					case "3":
+						imv_simpan.setVisibility(GONE);
+						belum.setVisibility(GONE);
+						proses.setVisibility(GONE);
+						sudah.setVisibility(GONE);
 						break;
-					case R.id.proses:
-						penanganan.setVisibility(View.VISIBLE);
-						tangani = "2";
+					case "2":
+						belum.setVisibility(GONE);
+						proses.setVisibility(GONE);
 						break;
-					case R.id.sudah:
-						penanganan.setVisibility(View.VISIBLE);
-						tangani = "3";
+					case "1":
+						belum.setVisibility(GONE);
+						break;
+					default:
+						belum.setVisibility(View.VISIBLE);
 						break;
 				}
-			});
 
-			if (statusPerbaikan.equalsIgnoreCase("3")) {
-				TastyToast.makeText(mContext, "Kerusakan Jalan Sudah Diperbaiki", TastyToast.LENGTH_SHORT, TastyToast.INFO);
-			} else {
-				AlertDialog.Builder alert = new AlertDialog.Builder(mContext);
-				alert.setView(alertLayout);
-				alert.setCancelable(false);
-				alert.setPositiveButton("Exit", (DialogInterface dialog, int which) -> dialog.dismiss());
-				AlertDialog dialog = alert.create();
-				dialog.show();
-				dialog.getButton(AlertDialog.BUTTON_POSITIVE).setAllCaps(false);
+				ambil_gambar1.setOnClickListener((View view) -> {
+					isChooseImage = false;
+					showFileChooser();
+				});
+				ambil_gambar2.setOnClickListener((View view) -> {
+					isChooseImage = true;
+					showFileChooser();
+				});
 
-				imv_simpan.setOnClickListener((View view) -> {
-					if (belum.isChecked() || proses.isChecked() || sudah.isChecked()) {
-						String images, images1;
-						if (tangani.equals("3")) {
-							if (bitmap1 == null || bitmap2 == null) {
-								TastyToast.makeText(mContext, "Foto harus Anda isi semua.", TastyToast.LENGTH_SHORT, TastyToast.WARNING);
+				radiopenanganan.setOnCheckedChangeListener((RadioGroup radioGroup, int i) -> {
+					switch (i) {
+						case R.id.belum:
+							penanganan.setVisibility(GONE);
+							tangani = "1";
+							break;
+						case R.id.proses:
+							penanganan.setVisibility(View.VISIBLE);
+							tangani = "2";
+							break;
+						case R.id.sudah:
+							penanganan.setVisibility(View.VISIBLE);
+							tangani = "3";
+							break;
+					}
+				});
+
+				if (statusPerbaikan.equalsIgnoreCase("3")) {
+					TastyToast.makeText(mContext, "Kerusakan Jalan Sudah Diperbaiki", TastyToast.LENGTH_SHORT, TastyToast.INFO);
+				} else {
+					AlertDialog.Builder alert = new AlertDialog.Builder(mContext);
+					alert.setView(alertLayout);
+					alert.setCancelable(false);
+					alert.setPositiveButton("Exit", (DialogInterface dialog, int which) -> dialog.dismiss());
+					AlertDialog dialog = alert.create();
+					dialog.show();
+					dialog.getButton(AlertDialog.BUTTON_POSITIVE).setAllCaps(false);
+
+					imv_simpan.setOnClickListener((View view) -> {
+						if (belum.isChecked() || proses.isChecked() || sudah.isChecked()) {
+							String images, images1;
+							if (tangani.equals("3")) {
+								if (bitmap1 == null || bitmap2 == null) {
+									TastyToast.makeText(mContext, "Foto harus Anda isi semua.", TastyToast.LENGTH_SHORT, TastyToast.WARNING);
+								} else {
+									images = getStringImage(bitmap1);
+									images1 = getStringImage(bitmap2);
+									requestUpdateData(id_kerusakan, images, images1, tangani);
+								}
+							} else if (tangani.equals("2")) {
+								if (bitmap1 == null || bitmap2 == null) {
+									TastyToast.makeText(mContext, "Foto harus Anda isi semua.", TastyToast.LENGTH_SHORT, TastyToast.WARNING);
+								} else {
+									images = getStringImage(bitmap1);
+									images1 = getStringImage(bitmap2);
+									requestUpdateData(id_kerusakan, images, images1, tangani);
+								}
 							} else {
-								images = getStringImage(bitmap1);
-								images1 = getStringImage(bitmap2);
-								requestUpdateData(id_kerusakan, images, images1, tangani);
-							}
-						} else if (tangani.equals("2")) {
-							if (bitmap1 == null || bitmap2 == null) {
-								TastyToast.makeText(mContext, "Foto harus Anda isi semua.", TastyToast.LENGTH_SHORT, TastyToast.WARNING);
-							} else {
-								images = getStringImage(bitmap1);
-								images1 = getStringImage(bitmap2);
-								requestUpdateData(id_kerusakan, images, images1, tangani);
+								TastyToast.makeText(mContext, "Mohon periksa inputan anda.", TastyToast.LENGTH_SHORT, TastyToast.WARNING);
 							}
 						} else {
 							TastyToast.makeText(mContext, "Mohon periksa inputan anda.", TastyToast.LENGTH_SHORT, TastyToast.WARNING);
 						}
-					} else {
-						TastyToast.makeText(mContext, "Mohon periksa inputan anda.", TastyToast.LENGTH_SHORT, TastyToast.WARNING);
-					}
-				});
+					});
+				}
+			}else{
+				TastyToast.makeText(mContext, "Mohon periksa inputan anda.", TastyToast.LENGTH_SHORT, TastyToast.WARNING);
 			}
 		}
 		return super.onOptionsItemSelected(item);
