@@ -194,7 +194,9 @@ public class DetailListDataActivity extends AppCompatActivity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.menu_edit, menu);
+		if(jabatan.equals("PPK")){
+			getMenuInflater().inflate(R.menu.menu_edit, menu);
+		}
 		return true;
 	}
 
