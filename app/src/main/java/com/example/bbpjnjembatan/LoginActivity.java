@@ -120,6 +120,12 @@ public class LoginActivity extends AppCompatActivity implements LocationListener
 		}
 	}
 
+	@OnClick(R.id.btnLupa)
+	void LupaPassword() {
+		Intent i = new Intent(mContext, LupaPasswordActivity.class);
+		startActivity(i);
+	}
+
 	@OnClick(R.id.btnMasuk)
 	void Login() {
 		String username = tfNip.getText().toString();

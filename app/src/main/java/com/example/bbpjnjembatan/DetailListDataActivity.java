@@ -359,7 +359,7 @@ public class DetailListDataActivity extends AppCompatActivity {
 	}
 
 	private void requestData() {
-		mApiService.dataJalanDetailRequest(id_kerusakan, "null", "null")
+		mApiService.dataJalanDetailRequest(id_kerusakan, "1", "")
 				.enqueue(new Callback<RestDataJalan>() {
 					@Override
 					public void onResponse(@NonNull Call<RestDataJalan> call, @NonNull Response<RestDataJalan> response) {

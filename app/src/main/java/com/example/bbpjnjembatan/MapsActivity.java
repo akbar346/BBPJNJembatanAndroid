@@ -189,7 +189,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 			btn_rute = dialog.findViewById(R.id.btn_rute);
 			btn_detail = dialog.findViewById(R.id.btn_detail);
 
-			mApiService.dataJalanDetailRequest(marker.getTitle(), "null", "null")
+			mApiService.dataJalanDetailRequest(marker.getTitle(), "1", "")
 					.enqueue(new Callback<RestDataJalan>() {
 						@SuppressLint("QueryPermissionsNeeded")
 						@Override
@@ -248,7 +248,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 		progressDialog.setMessage("Mohon tunggu...");
 		progressDialog.setCancelable(false);
 		progressDialog.show();
-		mApiService.dataJalanSatkerRequest(id_satker, "null", "null")
+		mApiService.dataJalanSatkerRequest(id_satker, "", "")
 				.enqueue(new Callback<RestDataJalan>() {
 					@Override
 					public void onResponse(@NonNull Call<RestDataJalan> call, @NonNull Response<RestDataJalan> response) {
@@ -286,7 +286,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 		progressDialog.setMessage("Mohon tunggu...");
 		progressDialog.setCancelable(false);
 		progressDialog.show();
-		mApiService.dataJalanPpkRequest(id_ppk, "null", "null")
+		mApiService.dataJalanPpkRequest(id_ppk, "", "")
 				.enqueue(new Callback<RestDataJalan>() {
 					@Override
 					public void onResponse(@NonNull Call<RestDataJalan> call, @NonNull Response<RestDataJalan> response) {
@@ -324,7 +324,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 		progressDialog.setMessage("Mohon tunggu...");
 		progressDialog.setCancelable(false);
 		progressDialog.show();
-		mApiService.dataJalanPegawaiRequest(id_user, "null", "null")
+		mApiService.dataJalanPegawaiRequest(id_user, "", "")
 				.enqueue(new Callback<RestDataJalan>() {
 					@Override
 					public void onResponse(@NonNull Call<RestDataJalan> call, @NonNull Response<RestDataJalan> response) {

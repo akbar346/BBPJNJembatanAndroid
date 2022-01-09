@@ -155,4 +155,12 @@ public interface BaseApiService {
 			@Field("pw_lama") String pw_lama,
 			@Field("pw_baru") String pw_baru
 	);
+
+	// Lupa Password
+	@FormUrlEncoded
+	@POST("do_forgot")
+	Call<Pesan> lupaPasswordRequest(
+			@Field("nip") String nip,
+			@Field("email") String email
+	);
 }

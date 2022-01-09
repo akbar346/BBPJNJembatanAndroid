@@ -17,8 +17,8 @@ android {
 
     buildTypes {
 		debug {
-			debuggable true
-			jniDebuggable true
+			debuggable false
+			jniDebuggable false
 		}
 		release {
 			minifyEnabled true
